@@ -1,0 +1,42 @@
+{% extends "layout.njk" %} 
+
+{% block head %}
+
+<title>Albuns - Diego Reis</title>
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+
+{% endblock %}
+
+{% block content %} 
+
+<div id="wrapper">
+    <h1>Albuns</h1>
+</div>
+
+<section class="cards">
+    {% for item in items %}
+        <div class="card" id="{{item.id}}">
+            <div class="card__image-container {{'featured-wrapper' if item.featured}}">
+                <img
+                    src="{{item.tumb}}"
+                    alt="{{item.title}}"
+                />
+                {% if item.featured %}
+                    <div class="featured">Featured</div>
+                {% endif %}
+            </div>
+            <div class="card__content">
+                <p>{{item.title}}</p>
+            </div>
+            <div class="card__info">
+                <p>{{item.faixas}}</p>
+                <p class="card__price">{{item.duration}}</p>
+            </div>
+        </div>
+    {% endfor %}
+</section>
+
+<script src="/scripts.js"></script>
+
+{% endblock %}

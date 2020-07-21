@@ -1,0 +1,24 @@
+{% extends "layout.njk" %} {% block content %}
+
+<div id="wrapper">
+    <img
+        src="{{data.avatar}}"
+        alt="{{data.nome}}"
+    />
+    <h1>{{data.nome}}</h1>
+    <h2>{{data.subtitulo}}</h2>
+
+    <p>
+        {{data.descricao}}
+        <a href="{{data.github}}" target="_blank">Github</a>
+    </p>
+</div>
+<div id="links-footer" class="links">
+    <a href="{{data.twitter}}" target="_blank">Twitter</a>
+    <a href="{{data.github}}" target="_blank">Github</a>
+    <a href="{{data.linkedin}}" target="_blank"
+        >Linkedin</a
+    >
+</div>
+
+{% endblock %}

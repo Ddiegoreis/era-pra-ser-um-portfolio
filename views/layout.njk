@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="/main.css" />
+
+        {% block head %}
+        <title>Diego Reis</title>
+        {% endblock %}
+    </head>
+
+    <body>
+        <header>
+            <div class="links">
+                <a href="/">Sobre</a>
+                <a href="/classes">Albuns</a>
+            </div>
+        </header>
+
+        {% block content %}{% endblock %}
+    </body>
+</html>
